@@ -1,0 +1,12 @@
+@mixin brand {
+    display: flex;
+        img{
+            width: 24.75px;
+            height: 25px;
+        }
+        .lendsqr-text-logo{
+            width: 138.44px;
+            height: 36px;
+            margin-left: 10px;
+        }
+}

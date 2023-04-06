@@ -1,0 +1,28 @@
+@import "../_theme_colors";
+
+.users-options{
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid rgba(84, 95, 125, 0.04);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    .dropdown-toggle::after {
+        display: none !important;
+    }
+
+    a{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: $color-primary;
+        text-decoration: none;
+        span{
+            width: 13px;
+            height: 13px;
+            font-size: 20px;
+        }
+    }
+    a:hover{
+        color: $color-primary;
+    }
+}

@@ -1,18 +1,12 @@
 import React from "react";
 import LoginForm from "../../components/auth/LoginForm";
+import Logo from "../../components/logo/Logo";
 
 const Login = () => {
   return (
     <div className="login-wrapper">
       <div className="showcase">
-        <div className="brand-logo">
-          <img src={require("../../assets/images/Union.png")} alt="unit-logo" />
-          <img
-            src={require("../../assets/images/lendsqr.png")}
-            alt="lendsqr-logo"
-            className="lendsqr-text-logo"
-          />
-        </div>
+        <Logo />
         <div className="showcase-image">
           <img
             src={require("../../assets/images/pablo-sign-in.png")}

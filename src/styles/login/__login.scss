@@ -1,5 +1,5 @@
 @import "../_theme_colors";
-
+@import "../_mixin";
 
 .login-wrapper{
     position: absolute;
@@ -12,16 +12,7 @@
     background-color: #fff;
 
     .brand-logo{
-        display: flex;
-        img{
-            width: 24.75px;
-            height: 25px;
-        }
-        .lendsqr-text-logo{
-            width: 138.44px;
-            height: 36px;
-            margin-left: 10px;
-        }
+       @include brand
     }
 
     .showcase-image{

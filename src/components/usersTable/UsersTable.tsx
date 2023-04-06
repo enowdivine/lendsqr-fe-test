@@ -1,6 +1,8 @@
-import React from "react";
 import { SlOptionsVertical } from "react-icons/sl";
 import { BsFilter } from "react-icons/bs";
+// importing table filter component
+import TableFilter from "../tableFilter/TableFilter";
+import UsersOptions from "../usersOption/UsersOptions";
 
 const UsersTable = () => {
   return (
@@ -8,40 +10,52 @@ const UsersTable = () => {
       <thead>
         <tr>
           <th>
-            ORGANIZATION{" "}
-            <span>
-              <BsFilter />
-            </span>
+            <TableFilter>
+              ORGANIZATION{" "}
+              <span>
+                <BsFilter />
+              </span>
+            </TableFilter>
           </th>
           <th>
-            USERNAME{" "}
-            <span>
-              <BsFilter />
-            </span>
+            <TableFilter>
+              USERNAME{" "}
+              <span>
+                <BsFilter />
+              </span>
+            </TableFilter>
           </th>
           <th>
-            EMAIL{" "}
-            <span>
-              <BsFilter />
-            </span>
+            <TableFilter>
+              EMAIL{" "}
+              <span>
+                <BsFilter />
+              </span>
+            </TableFilter>
           </th>
           <th>
-            PHONE NUMBER{" "}
-            <span>
-              <BsFilter />
-            </span>
+            <TableFilter>
+              PHONE NUMBER{" "}
+              <span>
+                <BsFilter />
+              </span>
+            </TableFilter>
           </th>
           <th>
-            DATE JOINED{" "}
-            <span>
-              <BsFilter />
-            </span>
+            <TableFilter>
+              DATE JOINED{" "}
+              <span>
+                <BsFilter />
+              </span>
+            </TableFilter>
           </th>
           <th>
-            STATUS{" "}
-            <span>
-              <BsFilter />
-            </span>
+            <TableFilter>
+              STATUS{" "}
+              <span>
+                <BsFilter />
+              </span>
+            </TableFilter>
           </th>
         </tr>
       </thead>
@@ -54,7 +68,9 @@ const UsersTable = () => {
           <td>date joined</td>
           <td>status</td>
           <td>
-            <SlOptionsVertical />
+            <UsersOptions userId="123">
+              <SlOptionsVertical />
+            </UsersOptions>
           </td>
         </tr>
         <tr>
@@ -65,7 +81,9 @@ const UsersTable = () => {
           <td>date joined</td>
           <td>status</td>
           <td>
-            <SlOptionsVertical />
+            <UsersOptions>
+              <SlOptionsVertical />
+            </UsersOptions>
           </td>
         </tr>
         <tr>
@@ -76,7 +94,9 @@ const UsersTable = () => {
           <td>date joined</td>
           <td>status</td>
           <td>
-            <SlOptionsVertical />
+            <UsersOptions>
+              <SlOptionsVertical />
+            </UsersOptions>
           </td>
         </tr>
         <tr>
@@ -87,7 +107,9 @@ const UsersTable = () => {
           <td>date joined</td>
           <td>status</td>
           <td>
-            <SlOptionsVertical />
+            <UsersOptions>
+              <SlOptionsVertical />
+            </UsersOptions>
           </td>
         </tr>
         <tr>
@@ -98,7 +120,9 @@ const UsersTable = () => {
           <td>date joined</td>
           <td>status</td>
           <td>
-            <SlOptionsVertical />
+            <UsersOptions>
+              <SlOptionsVertical />
+            </UsersOptions>
           </td>
         </tr>
       </tbody>

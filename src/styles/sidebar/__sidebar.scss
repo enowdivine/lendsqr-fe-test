@@ -1,0 +1,48 @@
+@import "../_theme_colors";
+
+.sidebar-wrapper{
+    div{
+        margin-bottom: 40px;
+        span{
+            color: rgba(33, 63, 125, 0.4);
+            margin-right: 10px;
+        }
+    }
+    a{
+        display: block;
+        height: 40px;
+        padding: 20px;
+        text-decoration: none;
+        color: $text-color;
+        display: flex;
+        align-items: center;
+    }
+    a:hover{
+        background-color: rgba(57, 205, 204, 0.06);
+        border-left: 3px solid $color-secondary;
+        color: $color-primary;
+    }
+    h4{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        font-family: "Work Sans";
+        padding: 0  0 0 10px;
+    }
+    .logout-section{
+        border-top:1px solid $color-primary;
+        a{
+            margin-top: 20px;
+        }
+        .logout:hover{
+            background-color: rgba(255, 51, 102, 0.06);
+            color: $color-error;
+            border-left: 3px solid $color-error;
+        }
+        .version{
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 400;
+        }
+    }
+}

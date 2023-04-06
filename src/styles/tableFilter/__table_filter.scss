@@ -1,0 +1,70 @@
+@import "../_theme_colors";
+
+@mixin inputStyle {
+    display: block;
+    width: 230px;
+    height: 40px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #213F7D;
+    opacity: 0.2;
+}
+
+@mixin btns {
+    box-sizing: border-box;
+    width: 98px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #545F7D;
+    background-color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.filter-drpdwn{
+    .dropdown-toggle::after {
+        display: none !important;
+    }
+}
+
+
+.table-filter{
+    height: 600px;
+    width: 270px;
+    padding: 30px 20px;
+    .input-div{
+        margin-bottom: 20px;
+    }
+    label{
+        color: $text-color;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 6px;
+    }
+    select, input{
+        @include inputStyle;
+    }
+    select{
+        padding: 5px 20px;
+    }
+    input{
+        padding: 12px 20px;
+    }
+    .btns{
+        margin-top: 10px;
+        .reset{
+            @include btns;
+            color: $text-color;
+            margin-right: 14px;
+        }
+        .filter{
+            @include btns;
+            background-color: $color-secondary;
+            color: #fff;
+            border: 1px solid #39CDCC;
+        }
+    }
+}

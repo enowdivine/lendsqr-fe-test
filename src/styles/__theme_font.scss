@@ -1,10 +1,16 @@
 // Avenir Font
 @font-face {
     font-family: Avenir Bold;
-    src: url("../assets//fonts//avenir-next/Avenir-Next-Bold.otf");
+    src: url("../assets/fonts//avenir-next/Avenir-Next-Bold.otf");
   }
 
   @font-face {
     font-family: Avenir Regular;
-    src: url("../assets//fonts//avenir-next/Avenir-Next-Regular.otf");
+    src: url("../assets/fonts//avenir-next/Avenir-Next-Regular.otf");
   }
+
+  // work sans Font
+@font-face {
+  font-family: Work Sans;
+  src: url("../assets/fonts//work-sans/WorkSans-Regular.ttf");
+}

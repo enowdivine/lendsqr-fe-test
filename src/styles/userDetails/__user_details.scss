@@ -1,0 +1,146 @@
+@import "../_theme_colors";
+
+@mixin btns {
+    width: 170px;
+    height: 40px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+.user-details{
+    width: 1037px;
+    .go-back{
+        a{
+            font-family: Work Sans;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: $text-color;
+            text-decoration: none;
+            span{
+                font-size: 20px;
+                margin-right: 15px;
+            }
+        }
+    }
+
+    .details{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 32px;
+        h4{
+            color: $color-primary;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+        }
+        .blacklist-user{
+            @include btns;
+            border: 1px solid $color-error;
+            color: $color-error;
+            margin-right: 20px;
+        }
+        .activate-user{
+            @include btns;
+            border: 1px solid $color-secondary;
+            color: $color-secondary;
+        }
+    }
+
+    .user-info{
+        height: 210px;
+        border-radius: 4px;
+        background-color: #fff;
+        border: 1px solid rgba(33, 63, 125, 0.06);
+        box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .profile-summary{
+            display: flex;
+            padding-top: 30px;
+            padding-left: 30px;
+            align-items: center;
+            .profile-image{
+                width: 100px;
+                height: 100px;
+                background-color: rgba(33, 63, 125, 0.2);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span{
+                    width: 30px;
+                    color: $color-primary;
+                    font-size: 30px;
+                }
+            }
+            .username{
+                margin-left: 20px;
+                h2{
+                    font-weight: 500;
+                    font-size: 22px;
+                    line-height: 26px;
+                    color: $color-primary;
+                }
+                span{
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+            .tier{
+                margin-left: 30px;
+                padding: 0 30px;
+                height: 80px;
+                border-left: 1px solid #545F7D;
+                border-right: 1px solid #545F7D;
+                p{
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: $color-primary;
+                    padding-top: 15px;
+                }
+            }
+            .balance{
+                margin-left: 30px;
+                h2{
+                    font-weight: 500;
+                    font-size: 22px;
+                    line-height: 26px;
+                    color: $color-primary;
+                }
+                span{
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 14px;
+                    color: $color-primary;
+                }
+            }
+        }
+        .tab-headers{
+            display: flex;
+            justify-content: space-evenly;
+            div{
+                color: $color-primary;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                padding: 10px;
+                cursor: pointer;
+            }
+            div:focus {
+                color: $color-secondary;
+                border-bottom: 2px solid $color-secondary;
+            }
+        }
+    }
+}

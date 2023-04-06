@@ -1,0 +1,70 @@
+@import "../_theme_colors";
+@import "../_mixin";
+
+.header{
+    padding: 30px;
+    display: flex;
+    .brand-logo{
+        @include brand
+     }
+
+    .search-input{
+        width: 400px;
+        height: 40px;
+        border-radius: 8px;
+        opacity: 20%;
+        background-color: #fff;
+        border: 1px solid #213F7D;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: none;
+        margin-left: 168px;
+        input{
+            width: 89%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+            padding: 8px;
+            outline: none;
+        }
+        .search-icon{
+            width: 56px;
+            height: 40px;
+            background-color: $color-secondary;
+            border-top-right-radius:8px ;
+            border-bottom-right-radius:8px ;
+            display: flex;
+            justify-content: center;
+            .icon{
+                color: #fff;
+                width: 14px;
+                height: 14px;
+                margin-top: 5px;
+            }
+        }
+        
+     }
+     .docs-and-profile-group{
+       position: absolute;
+       right: 0;
+       display: flex;
+       .notification-bell{
+            margin-right: 33px;
+            color: $color-primary;
+            width: 20px;
+            height: 22px;
+            font-size: 20px;
+            margin-top: 4px;
+       }
+       a{
+        font-weight: 400;
+        line-height: 19px;
+        font-size: 16px;
+        text-decoration: underline;
+        color: $color-primary;
+        margin-right: 47px;
+        margin-top: 10px;
+       }
+     }
+}
