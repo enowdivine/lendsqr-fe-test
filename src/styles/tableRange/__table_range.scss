@@ -1,0 +1,14 @@
+@import "../_theme_colors";
+
+.select-range{
+    background: rgba(33, 63, 125, 0.1);
+    border-radius: 4px;
+    font-size: 14px;
+    color: $color-primary;
+    line-height: 16px;
+    font-weight: 500;
+    width: 80px;
+    height: 30px;
+    padding: 5px;
+    margin: 0 5px;
+}

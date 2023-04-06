@@ -1,0 +1,21 @@
+
+@import "./login/_login";
+@import "./login/_login_form";
+
+// dashboard layout styles
+@import "./dashboardLayout/_dashboard_layout";
+
+// card layout styles
+@import "./card/__card";
+
+// dashboard styles
+@import "./dashboard/__dashboard";
+
+// users tables styles
+@import "./usersTable/_users_table";
+
+// pagination styles
+@import "./pagination/__pagination";
+
+// pagination styles
+@import "./tableRange/_table_range";

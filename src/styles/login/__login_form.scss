@@ -1,0 +1,94 @@
+@import "../_theme_colors";
+@import "../_theme_font";
+
+@mixin form-input-div {
+    box-sizing: border-box;
+    width: 447px;
+    height: 50px;
+    border-radius: 5px;
+    margin-bottom: 24px;
+    background: #FFFFFF;
+    border: 2px solid rgba(84, 95, 125, 0.15);
+    border-radius: 5px;
+    outline: none;
+}
+
+.login-form{
+    h4{
+        font-family: Avenir Bold;
+        width: 183px;
+        height: 55px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 55px;
+        letter-spacing: -0.04em;
+        color: $color-primary;
+        margin: 0px;
+        padding: 0;
+    }
+    p{
+        font-family: Avenir Regular;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 27px;
+        color: #545F7D;
+        margin-bottom: 60px;
+    }
+    .form-input-div{
+        @include form-input-div;
+        .password-show-hide{
+            width: 49.41px;
+            height: 12.5px;
+            font-family: Avenir Regular;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: center;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: $color-secondary;
+            cursor: pointer;
+        }
+        .email{
+            padding: 14px;
+            width: 93%;
+            border: none !important;
+            outline: none !important;
+        }
+        .password{
+            padding: 14px;
+            width: 82%;
+            border: none !important;
+            outline: none !important;
+        }
+    }
+    .forgot-password-div{
+        span{
+            width: 147px;
+            height: 17px;
+            font-family: Avenir Regular;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: $color-secondary;
+            cursor: pointer;
+        }
+    }
+    button{
+        margin-top: 30px;
+        border-radius: 8px;
+        background-color: $color-secondary;
+        width: 447px;
+        height: 48px;
+        border: none;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-weight: 600;
+    }
+}

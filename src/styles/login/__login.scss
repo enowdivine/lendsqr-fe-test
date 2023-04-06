@@ -1,0 +1,51 @@
+@import "../_theme_colors";
+
+
+.login-wrapper{
+    position: absolute;
+    width: 1440px;
+    height: 900px;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+
+    .brand-logo{
+        display: flex;
+        img{
+            width: 24.75px;
+            height: 25px;
+        }
+        .lendsqr-text-logo{
+            width: 138.44px;
+            height: 36px;
+            margin-left: 10px;
+        }
+    }
+
+    .showcase-image{
+        img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 600px;
+            height: 337.57px;
+        }
+    }
+
+    .login-form-section{
+        position: absolute;
+        width: 704px;
+        height: 900px;
+        left: 736px;
+        top: -5px;
+        padding-left: 100px;
+        background-color: #fff;
+        box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
+        display: flex;
+        align-items: center;
+    }
+}
+

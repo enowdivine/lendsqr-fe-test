@@ -1,0 +1,30 @@
+@import "../_theme_colors";
+
+@mixin single-step-pagination{
+    width: 24px;
+    height: 24px;
+    background: rgba(33, 63, 125, 0.1);
+    border-radius: 4px;  
+    color: $text-color;  
+}
+
+.page-navigation{
+    ul{
+        li{
+            a{
+                color: $text-color;
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                margin: 0 10px;
+            }
+            .previous{
+                @include single-step-pagination
+            }
+            .next{
+                @include single-step-pagination
+            }
+        }
+    }
+}

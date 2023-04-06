@@ -1,0 +1,25 @@
+@import "../_theme_colors";
+
+h4{
+    color: $color-primary;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 13px;
+}
+
+.info-cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.table-range{
+    width: 1037px;
+    margin-top: 20px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    color: $text-color;
+}
