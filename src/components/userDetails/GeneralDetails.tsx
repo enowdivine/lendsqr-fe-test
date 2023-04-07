@@ -14,7 +14,7 @@ const GeneralDetails = () => {
           <div>
             <span>FULL NAME</span>
             <h3>
-              {user?.profile.firstName} {user?.profile.lastName}
+              {user?.profile?.firstName} {user?.profile?.lastName}
             </h3>
           </div>
           <div>
@@ -27,11 +27,11 @@ const GeneralDetails = () => {
           </div>
           <div>
             <span>BVN</span>
-            <h3>{user?.profile.bvn}</h3>
+            <h3>{user?.profile?.bvn}</h3>
           </div>
           <div>
             <span>GENDER</span>
-            <h3>{user?.profile.gender}</h3>
+            <h3>{user?.profile?.gender}</h3>
           </div>
           <div>
             <span>MARITAL STATUS</span>
@@ -52,31 +52,31 @@ const GeneralDetails = () => {
         <div className="info">
           <div>
             <span>LEVEL OF EDUCATION</span>
-            <h3>{user?.education.level}</h3>
+            <h3>{user?.education?.level}</h3>
           </div>
           <div>
             <span>EMPLOYMENT STATUS</span>
-            <h3>{user?.education.employmentStatus}</h3>
+            <h3>{user?.education?.employmentStatus}</h3>
           </div>
           <div>
             <span>SECTOR OF EMPLOYMENT</span>
-            <h3>{user?.education.sector}</h3>
+            <h3>{user?.education?.sector}</h3>
           </div>
           <div>
             <span>DURATION OF EMPLOYMENT</span>
-            <h3>{user?.education.duration}</h3>
+            <h3>{user?.education?.duration}</h3>
           </div>
           <div>
             <span>OFFICE EMAIL</span>
-            <h3>{user?.education.officeEmail}</h3>
+            <h3>{user?.education?.officeEmail}</h3>
           </div>
           <div>
             <span>MONTHLY INCOME</span>
-            <h3>{user?.education.monthlyIncome[0]}</h3>
+            <h3>{user?.education?.monthlyIncome[0]}</h3>
           </div>
           <div>
             <span>LOAN REPAYMENT</span>
-            <h3>{user?.education.loanRepayment}</h3>
+            <h3>{user?.education?.loanRepayment}</h3>
           </div>
         </div>
       </div>
@@ -85,15 +85,15 @@ const GeneralDetails = () => {
         <div className="info">
           <div>
             <span>TWITTER</span>
-            <h3>{user?.socials.twitter}</h3>
+            <h3>{user?.socials?.twitter}</h3>
           </div>
           <div>
             <span>FACEBOOK</span>
-            <h3>{user?.socials.facebook}</h3>
+            <h3>{user?.socials?.facebook}</h3>
           </div>
           <div>
             <span>INSTAGRAM</span>
-            <h3>{user?.socials.instagram}</h3>
+            <h3>{user?.socials?.instagram}</h3>
           </div>
         </div>
       </div>
@@ -103,12 +103,12 @@ const GeneralDetails = () => {
           <div>
             <span>FULL NAME</span>
             <h3>
-              {user?.guarantor.firstName} {user?.guarantor.lastName}
+              {user?.guarantor?.firstName} {user?.guarantor?.lastName}
             </h3>
           </div>
           <div>
             <span>PHONE NUMBER</span>
-            <h3>{user?.guarantor.phoneNumber}</h3>
+            <h3>{user?.guarantor?.phoneNumber}</h3>
           </div>
           <div>
             <span>EMAIL ADDRESS</span>

@@ -49,7 +49,7 @@ const UserDetails = () => {
             </div>
             <div className="username">
               <h2>
-                {user?.profile.firstName} {user?.profile.lastName}
+                {user?.profile?.firstName} {user?.profile?.lastName}
               </h2>
               <span>{user?.accountNumber}</span>
             </div>
@@ -61,10 +61,10 @@ const UserDetails = () => {
             </div>
             <div className="balance">
               <h2>
-                {user?.profile.currency}
+                {user?.profile?.currency}
                 {user?.accountBalance}
               </h2>
-              <span>{user?.profile.bvn}/Providus Bank</span>
+              <span>{user?.profile?.bvn}/Providus Bank</span>
             </div>
           </div>
           {/* tab headers */}
