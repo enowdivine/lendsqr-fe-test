@@ -1,10 +1,22 @@
+import React, { useEffect } from "react";
 import { SlOptionsVertical } from "react-icons/sl";
 import { BsFilter } from "react-icons/bs";
+import Moment from "react-moment";
 // importing table filter component
 import TableFilter from "../tableFilter/TableFilter";
 import UsersOptions from "../usersOption/UsersOptions";
+import { useSelector, useDispatch } from "react-redux";
+import type { RootState, AppDispatch } from "../../redux/store";
+import { allUsers } from "../../redux/reducers/usersReducer";
 
 const UsersTable = () => {
+  const dispatch = useDispatch<AppDispatch>();
+  const users = useSelector((state: RootState) => state.users?.users);
+
+  useEffect(() => {
+    dispatch(allUsers());
+  }, []);
+
   return (
     <table className="table-users">
       <thead>
@@ -60,71 +72,25 @@ const UsersTable = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>organizaton</td>
-          <td>username</td>
-          <td>email</td>
-          <td>phone numner</td>
-          <td>date joined</td>
-          <td>status</td>
-          <td>
-            <UsersOptions userId="123">
-              <SlOptionsVertical />
-            </UsersOptions>
-          </td>
-        </tr>
-        <tr>
-          <td>organizaton</td>
-          <td>username</td>
-          <td>email</td>
-          <td>phone numner</td>
-          <td>date joined</td>
-          <td>status</td>
-          <td>
-            <UsersOptions>
-              <SlOptionsVertical />
-            </UsersOptions>
-          </td>
-        </tr>
-        <tr>
-          <td>organizaton</td>
-          <td>username</td>
-          <td>email</td>
-          <td>phone numner</td>
-          <td>date joined</td>
-          <td>status</td>
-          <td>
-            <UsersOptions>
-              <SlOptionsVertical />
-            </UsersOptions>
-          </td>
-        </tr>
-        <tr>
-          <td>organizaton</td>
-          <td>username</td>
-          <td>email</td>
-          <td>phone numner</td>
-          <td>date joined</td>
-          <td>status</td>
-          <td>
-            <UsersOptions>
-              <SlOptionsVertical />
-            </UsersOptions>
-          </td>
-        </tr>
-        <tr>
-          <td>organizaton</td>
-          <td>username</td>
-          <td>email</td>
-          <td>phone numner</td>
-          <td>date joined</td>
-          <td>status</td>
-          <td>
-            <UsersOptions>
-              <SlOptionsVertical />
-            </UsersOptions>
-          </td>
-        </tr>
+        {users?.slice(0, 10).map((user: any, index) => {
+          return (
+            <tr key={user.id}>
+              <td>{user?.orgName}</td>
+              <td>{user?.userName}</td>
+              <td>{user?.email}</td>
+              <td>{user?.phoneNumber}</td>
+              <td>
+                <Moment format="MM:DD:YYYY - HH:mm">{user?.createdAt}</Moment>
+              </td>
+              <td>{user?.status}</td>
+              <td>
+                <UsersOptions userId={user?.id}>
+                  <SlOptionsVertical />
+                </UsersOptions>
+              </td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );

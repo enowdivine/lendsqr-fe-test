@@ -1,13 +1,26 @@
+import React, { useEffect } from "react";
 import DashboardLayout from "../../layouts/DashboardLayout";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
 import { BiUser } from "react-icons/bi";
 import StarRating from "../../components/starRating/StarRating";
 import GeneralDetails from "../../components/userDetails/GeneralDetails";
+import { useSelector, useDispatch } from "react-redux";
+import type { RootState, AppDispatch } from "../../redux/store";
+import { singleUser } from "../../redux/reducers/usersReducer";
 
 const UserDetails = () => {
   const [switchTabs, setSwitchTabs] = useState("general");
+
+  const urlParams = useParams();
+  const dispatch = useDispatch<AppDispatch>();
+  const result = useSelector((state: RootState) => state.users?.user);
+
+  useEffect(() => {
+    dispatch(singleUser(urlParams?.id!));
+  }, []);
+  const user: any = result;
 
   return (
     <DashboardLayout>
@@ -35,8 +48,10 @@ const UserDetails = () => {
               </span>
             </div>
             <div className="username">
-              <h2>Grace Effiom</h2>
-              <span>LSQFf587g90</span>
+              <h2>
+                {user?.profile.firstName} {user?.profile.lastName}
+              </h2>
+              <span>{user?.accountNumber}</span>
             </div>
             <div className="tier">
               <p>User's Tier</p>
@@ -45,8 +60,11 @@ const UserDetails = () => {
               </span>
             </div>
             <div className="balance">
-              <h2>N200,000.00</h2>
-              <span>9912345678/Providus Bank</span>
+              <h2>
+                {user?.profile.currency}
+                {user?.accountBalance}
+              </h2>
+              <span>{user?.profile.bvn}/Providus Bank</span>
             </div>
           </div>
           {/* tab headers */}
